@@ -1,6 +1,6 @@
 :root {
     --primary-color: #003366;
-    --accent-color: #FF6600; 
+    --accent-color: #0059b3; 
     --light-bg: #f8f8f8; 
     --text-color: #333;
     --font-family: 'Roboto', sans-serif;
@@ -48,8 +48,8 @@ body {
 }
 
 .primary-cta:hover {
-    background-color: #e55c00;
-    border-color: #e55c00;
+    background-color: #0059b3;
+    border-color: #0059b3;
 }
 
 .main-header {
@@ -113,7 +113,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    /* Apply a semi-transparent dark color (e.g., black with 60% opacity) */
     background-color: rgba(0, 0, 0, 0.6); 
     z-index: -1;
 }
