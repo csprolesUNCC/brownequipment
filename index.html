@@ -91,7 +91,7 @@
             <h2>Ready to Start Your Project?</h2>
             <p>Send us your files (STEP or Solid Model) and let's discuss your manufacturing needs.</p>
             
-            <form action="submit_form.php" method="POST" class="contact-form">
+            <form action="api/submit-quote.js" method="POST" class="contact-form" enctype="multipart/form-data">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <input type="tel" name="phone" placeholder="Your Phone Number">

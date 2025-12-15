@@ -1,0 +1,12 @@
+{
+  "name": "bem-form-handler",
+  "version": "1.0.0",
+  "description": "Handles quote submissions for BEM using Resend.",
+  "dependencies": {
+    "formidable": "^3.5.1",
+    "resend": "^3.0.0"
+  },
+  "scripts": {
+    "start": "echo 'Run locally using Vercel CLI: vercel dev'"
+  }
+}
