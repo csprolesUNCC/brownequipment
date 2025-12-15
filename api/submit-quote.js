@@ -7,7 +7,7 @@ const fs = require('fs');
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const RECIPIENTS = ['csproles02@gmail.com', 'carsonrsproles@gmail.com']; 
-const SENDER = 'Quote Form <support@trustydahorse.com>'; // Must be a verified email/domain
+const SENDER = 'Quote Form <support@trustydahorse.com>';
 
 module.exports = async (req, res) => {
     if (req.method !== 'POST') {
@@ -55,8 +55,8 @@ module.exports = async (req, res) => {
             attachments: attachments,
         });
 
-        res.writeHead(302, { Location: '/success-page.html' || '/' });
-        res.end();
+        res.setHeader('Content-Type', 'application/json');
+        res.status(200).json({ success: true, message: 'Quote submitted successfully!' });
 
     } catch (error) {
         console.error('Error processing quote submission:', error);
