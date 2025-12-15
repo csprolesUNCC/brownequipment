@@ -1,7 +1,7 @@
 // api/submit-quote.js
 
 const { Resend } = require('resend');
-const formidable = require('formidable');
+const { formidable } = require('formidable');
 const fs = require('fs');
 
 const resend = new Resend(process.env.RESEND_API_KEY);
