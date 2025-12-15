@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brown Equipment Manufacturing (BEM) | Precision Laser Cutting & Fabrication</title>
+    <link rel="stylesheet" href="styles/styles.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">BEM **|** Brown Equipment MFG</div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#facility">Facility</a></li>
+                    <li><a href="pages/about.html">About Us</a></li>
+                    <li><a href="pages/careers.html">Careers</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="cta-button header-cta">Request a Quote</a>
+        </div>
+    </header>
+
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <h1>Precision Metal Fabrication, Delivered with Speed.</h1>
+            <p>Your one-stop shop for high-quality laser cutting, welding, and finishing services in Monroe, NC.</p>
+            <a href="#contact" class="cta-button primary-cta">Send Us Your File & Get a Fast Quote</a>
+            <div class="contact-info">
+                <span>Call Us Today: <b>704-921-4644</b></span>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services-section section-padding">
+        <div class="container">
+            <h2>Our Core Capabilities</h2>
+            <p class="section-description">We combine state-of-the-art equipment with skilled expertise for flawless results, every time.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="images/laser-icon.png" alt="Laser Cutting Icon">
+                    <h3>Precision Laser Cutting</h3>
+                    <p>Cutting sheets up to 60" x 156" and up to one inch thick steel with unmatched precision.</p>
+                </div>
+                <div class="service-card">
+                    <img src="images/tube-icon.png" alt="Tube Laser Icon">
+                    <h3>Tube Laser</h3>
+                    <p>Dedicated tube cutting capabilities for complex shapes and faster production runs.</p>
+                </div>
+                <div class="service-card">
+                    <img src="images/welding-icon.png" alt="Welding Icon">
+                    <h3>Welding & Assembly</h3>
+                    <p>Expert TIG/MIG welding and robotic welding for consistent quality and volume orders.</p>
+                </div>
+                <div class="service-card">
+                    <img src="images/check-icon.png" alt="Finishing Icon">
+                    <h3>Finishing Services</h3>
+                    <p>Complete your project with powder coating, galvanizing, and blasting services through our partners.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="facility" class="facility-section section-padding dark-bg">
+        <div class="container">
+            <div class="split-content">
+                <div class="content-text">
+                    <h2>The BEM Advantage</h2>
+                    <p>Our commitment is rooted in a modern facility and a team dedicated to excellence.</p>
+                    <ul>
+                        <li><b>40,000 sq. ft.</b> Facility in Monroe, NC.</li>
+                        <li>High-Performance Equipment from lasers to welding robots.</li>
+                        <li>Decades of collective experience from talented, skilled workers.</li>
+                        <li>Commitment to <i><b>Consistency, Quality, and Value.</b></i></li>
+                    </ul>
+                </div>
+                <div class="content-image">
+                    <img src="images/shop-view-1.jpg" alt="Interior view of BEM state-of-the-art manufacturing facility">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact-section section-padding">
+        <div class="container">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Send us your files (STEP or Solid Model) and let's discuss your manufacturing needs.</p>
+            
+            <form action="submit_form.php" method="POST" class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="tel" name="phone" placeholder="Your Phone Number">
+                <textarea name="message" placeholder="Tell us about your project..." rows="4" required></textarea>
+                <input type="file" name="project_file" accept=".step, .sldprt, .zip"> 
+                <button type="submit" class="cta-button primary-cta">Request Quote & Upload File</button>
+            </form>
+
+            <div class="contact-details">
+                <p>or call us directly at: <b>704-921-4644</b></p>
+                <address>650 Broome St. Monroe NC, 28110, USA</address>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p class="copyright">&copy; 2025 Brown Equipment MFG. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
