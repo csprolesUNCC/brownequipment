@@ -279,6 +279,17 @@ h2 {
     opacity: 0.8;
 }
 
+.development-notice {
+    background-color: #ffcc00;
+    color: #333;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 0.9em;
+    font-weight: 700;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 @media (max-width: 900px) {
     .split-content {
         flex-direction: column;
