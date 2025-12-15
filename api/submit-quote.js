@@ -10,6 +10,16 @@ const RECIPIENTS = ['csproles02@gmail.com', 'carsonrsproles@gmail.com'];
 const SENDER = 'Quote Form <support@trustydahorse.com>';
 
 module.exports = async (req, res) => {
+
+    res.setHeader('Access-Control-Allow-Origin', '*'); 
+    res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+
+    if (req.method === 'OPTIONS') {
+        res.status(200).end();
+        return;
+    }
+
     if (req.method !== 'POST') {
         res.status(405).send('Method Not Allowed');
         return;
@@ -60,6 +70,10 @@ module.exports = async (req, res) => {
 
     } catch (error) {
         console.error('Error processing quote submission:', error);
-        res.status(500).send('There was an error submitting your quote. Please try again.');
+        res.setHeader('Content-Type', 'application/json');
+        res.status(500).json({ 
+            success: false, 
+            message: 'There was an error submitting your quote. Please call us directly.' 
+        });
     }
 };

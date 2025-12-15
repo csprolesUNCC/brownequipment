@@ -1,13 +1,14 @@
 const form = document.querySelector('.contact-form');
-const popup = document.getElementById('success-popup');
-const popupMessage = popup.querySelector('p');
 
+// Function to handle form submission
 form.addEventListener('submit', async (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Stop the default browser submission/redirect
 
     const formData = new FormData(form);
     const formUrl = form.getAttribute('action');
     const submitButton = form.querySelector('.primary-cta');
+    
+    const name = formData.get('name') || 'Valued Customer';
 
     submitButton.textContent = 'Sending...';
     submitButton.disabled = true;
@@ -15,29 +16,23 @@ form.addEventListener('submit', async (e) => {
     try {
         const response = await fetch(formUrl, {
             method: 'POST',
-            body: formData,
+            body: formData, 
         });
 
-        const result = await response.json();
+        const result = await response.json(); 
         
         if (response.ok && result.success) {
-            const name = formData.get('name') || 'Valued Customer';
-            popupMessage.innerHTML = `Thank you, **${name}**! Your quote request has been sent successfully. We will review your files and contact you shortly.`;
-            popup.classList.add('popup-visible');
-            form.reset();
+            alert(`✅ Success! Thank you, ${name}. Your quote request has been sent successfully. We will contact you shortly.`);
+            form.reset(); // Clear the form fields
         } else {
-            alert('Submission Failed: ' + (result.message || 'Please check your connection and try again.'));
+            alert('❌ Submission Failed: ' + (result.message || 'An unknown error occurred. Please check your connection and try again.'));
         }
 
     } catch (error) {
         console.error('Submission error:', error);
-        alert('A network error occurred. Please call us at 704-921-4644.');
+        alert('⚠️ A network error occurred. Please call us directly at 704-921-4644.');
     } finally {
         submitButton.textContent = 'Request Quote & Upload File';
         submitButton.disabled = false;
     }
 });
-
-function closePopup() {
-    popup.classList.remove('popup-visible');
-}
