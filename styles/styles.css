@@ -68,9 +68,9 @@ body {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
+    height: 40px;
+    width: auto;
+    max-width: 150px;
 }
 
 .main-nav ul {
