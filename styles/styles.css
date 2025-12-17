@@ -71,6 +71,15 @@ body {
     height: 40px;
     width: auto;
     max-width: 150px;
+    display: flex; 
+    align-items: center;
+}
+
+.logo a, 
+.logo img {
+    height: 100%; 
+    width: auto;
+    object-fit: contain; 
 }
 
 .main-nav ul {
